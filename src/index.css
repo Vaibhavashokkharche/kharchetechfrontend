@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+html, body, #root {
+  min-height: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  background: #fdfcf8;
+}
+a {
+  text-decoration: none;
+}
+button, input, textarea {
+  font: inherit;
+}
