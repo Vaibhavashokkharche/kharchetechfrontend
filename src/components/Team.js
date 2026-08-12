@@ -21,6 +21,11 @@ const teamMembers = [
     role: 'Frontend Developer',
     image: '/images/Shradhha2.jpeg',
   },
+  {
+    name: 'Prasad Patil',
+    role: 'Quality Anaylst',
+    image: '/images/prasad.jpeg',
+  },
    
 ];
 
