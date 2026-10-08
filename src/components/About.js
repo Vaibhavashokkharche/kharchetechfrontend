@@ -1,13 +1,10 @@
 import React from 'react';
-import Team from './Team';
 
 export default function About() {
-  const services = [
-    'Full-Stack Web Application Development (React, Bootstrap, JS/TS)',
-    'Enterprise .NET Development (ASP.NET Core, APIs, Azure)',
-    'Robust Java Development (Spring Boot, REST APIs)',
-    'API Development & System Integration (REST / GraphQL)',
-    'QA Testing, Maintenance & Support (Automated & Manual)'
+  const outcomes = [
+    { number: '01', title: 'More qualified enquiries', description: 'Clear service pages and strong calls to action make it easier for the right customers to reach you.' },
+    { number: '02', title: 'A smoother customer journey', description: 'Mobile-first experiences help customers find information, trust your business, and take the next step.' },
+    { number: '03', title: 'A system that can grow', description: 'Maintainable software and integrations reduce manual work and support your next stage of growth.' },
   ];
 
   return (
@@ -15,42 +12,35 @@ export default function About() {
       <div className="container section-card">
         <div className="row align-items-center gy-4">
           <div className="col-lg-6">
-            <h2>About Kharche Technologies</h2>
-            <p className="section-subtitle">We create calm, user-first websites and reliable backend systems for local businesses and growing brands.</p>
+            <p className="text-soft about-kicker">A technology partner, not just a vendor</p>
+            <h2>Technology should move your business forward.</h2>
+            <p className="about-intro">Kharche Technologies helps local businesses and growing teams turn customer and operational challenges into practical digital products. We combine clear communication, thoughtful design, and dependable engineering from discovery through launch.</p>
 
-            <h5 className="mt-4">Founder</h5>
-            <div className="d-flex align-items-center gap-3 mb-3">
-              <img src="/images/Vaibhav.png" alt="Vaibhav Kharche" style={{ width: 72, height: 72, objectFit: 'cover', borderRadius: 12 }} />
-              <div>
-                <strong>Vaibhav Kharche</strong>
-                <div className="text-soft">Founder & Software Developer — FullStack engineer with 3 years experience and PGDAC from CDAC Pune.</div>
-              </div>
-            </div>
-
-            <h5 className="mt-4">Services</h5>
-            <ul>
-              {services.map((s) => (
-                <li key={s} className="text-soft">{s}</li>
+            <div className="about-outcomes">
+              {outcomes.map((outcome) => (
+                <article className="outcome-item" key={outcome.number}>
+                  <span className="outcome-number">{outcome.number}</span>
+                  <div><h3>{outcome.title}</h3><p>{outcome.description}</p></div>
+                </article>
               ))}
-            </ul>
-
-            <p className="mt-3">For project enquiries, timelines, and pricing, use the Enquiry form or contact us directly via the Contact section.</p>
+            </div>
           </div>
 
           <div className="col-lg-6">
-            <div className="section-card">
-              <h5>Our approach</h5>
-              <p className="text-soft">We focus on simple, maintainable code, thoughtful UX, and reliable deployments. Our work is optimized for performance, accessibility, and a calm user experience.</p>
-              <div className="mt-3">
-                <a href="#enquiry" className="btn btn-primary me-2">Start a Project</a>
-                <a href="#contact" className="btn btn-outline-primary">Get In Touch</a>
+            <div className="about-founder-card">
+              <div className="founder-heading">
+                <img src="/images/Vaibhav.png" alt="Vaibhav Kharche, Founder" />
+                <div><span>Founder</span><h3>Vaibhav Kharche</h3><p>Full-Stack Software Engineer</p></div>
+              </div>
+              <p className="founder-bio">With 3 years of development experience and a PGDAC from CDAC Pune, Vaibhav leads each project with a focus on useful outcomes, reliable delivery, and direct client communication.</p>
+              <div className="founder-credentials"><span>3 years’ experience</span><span>PGDAC · CDAC Pune</span><span>Pune, India</span></div>
+              <div className="about-approach">
+                <h3>How we work</h3>
+                <p>We start by understanding your goals, agree on scope and milestones, then share progress as we design, build, test, and launch. You stay involved and know what comes next.</p>
+                <a href="#enquiry" className="btn btn-primary">Discuss your goals <span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="mt-5">
-          <Team />
         </div>
       </div>
     </section>

@@ -56,6 +56,17 @@ export default function AdminDashboard({ token, onLogout }) {
                 <small className="text-muted">{new Date(q.createdAt).toLocaleString()}</small>
               </div>
               <div className="text-soft">{q.email}</div>
+              {(q.businessType || q.serviceRequired || q.projectType || q.phone) && (
+                <div className="admin-enquiry-meta">
+                  {(q.businessType || q.serviceRequired || q.projectType) && (
+                    <div className="d-flex flex-wrap gap-2 my-2">
+                      {q.businessType && <span className="badge text-bg-light">{q.businessType}</span>}
+                      {(q.serviceRequired || q.projectType) && <span className="badge text-bg-light">{q.serviceRequired || q.projectType}</span>}
+                    </div>
+                  )}
+                  {q.phone && <div className="text-soft">Phone: {q.phone}</div>}
+                </div>
+              )}
               <p className="mt-2 mb-0">{q.message}</p>
             </div>
           ))}

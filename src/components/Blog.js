@@ -2,16 +2,16 @@ import React from 'react';
 
 const blogPosts = [
   {
-    title: 'Why Modern Web Apps Matter',
-    excerpt: 'Explore how clean UI, responsive design, and fast performance create trust for local businesses.',
+    title: 'Your website is part of your sales team',
+    excerpt: 'Make it easy for a potential customer to understand what you offer, trust your business, and take action on any device.',
   },
   {
-    title: 'Building a UI that Feels Calm',
-    excerpt: 'Learn design choices for wellness and lifestyle brands with soft colors, spacing, and approachable fonts.',
+    title: 'When should a business automate a process?',
+    excerpt: 'Spot repetitive tasks, delays, and avoidable errors that could be improved with a fit-for-purpose digital workflow.',
   },
   {
-    title: 'APIs, Integrations, and Growth',
-    excerpt: 'How modern APIs connect websites with payments, user accounts, and business data.',
+    title: 'Planning a software project with confidence',
+    excerpt: 'A clear scope, practical milestones, and early feedback help teams manage risk and get value sooner.',
   },
 ];
 
@@ -21,8 +21,8 @@ export default function Blog() {
       <div className="container section-card">
         <div className="text-center mb-5">
           <p className="text-soft">Blog</p>
-          <h2>Insights on development and growth</h2>
-          <p className="section-subtitle">Short stories and ideas for clients building their next digital experience.</p>
+          <h2>Useful ideas for smarter digital decisions</h2>
+          <p className="section-subtitle">Straightforward guidance to help you choose and plan technology that serves a real business goal.</p>
         </div>
         <div className="row g-4">
           {blogPosts.map((post) => (

@@ -6,12 +6,14 @@ export default function Contact() {
       <div className="container section-card">
         <div className="row gy-4">
           <div className="col-lg-6">
-            <p className="text-soft">Contact Us</p>
-            <h2>Get in touch with Kharche Technologies</h2>
-            <p className="section-subtitle">Email, office address, and location for project enquiries and support.</p>
+            <p className="text-soft">Contact</p>
+            <h2>Let’s talk about your business goals.</h2>
+            <p className="section-subtitle">Tell us what you’re looking to improve. We’ll connect you with the right person to discuss your project.</p>
             <div className="mt-4">
-              <p className="mb-2"><strong>Email:</strong> vaibhavkharche4328@gmail.com</p>
-              <p className="mb-2"><strong>Address:</strong> Ace Astha Society Charholi Road, Charholi Budruk, Haveli, MH-412105, India</p>
+              <p className="mb-2"><strong>Email:</strong> <a href="mailto:vaibhavkharche4328@gmail.com">vaibhavkharche4328@gmail.com</a></p>
+              <p className="mb-2"><strong>Phone:</strong> <a href="tel:+917218964006">+91 72189 64006</a></p>
+              <p className="mb-2"><strong>Location:</strong> Ace Astha Society, Charholi Road, Charholi Budruk, Haveli, Maharashtra 412105, India</p>
+              <p className="contact-response-note">Serving businesses in Pune and beyond.</p>
             </div>
           </div>
           <div className="col-lg-6">

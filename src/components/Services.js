@@ -2,24 +2,24 @@ import React from 'react';
 
 const serviceCards = [
   {
-    title: 'Full-Stack Web Application Development',
-    description: 'End-to-end design, development, and deployment using React, HTML5, CSS3, JavaScript, and TypeScript.',
+    title: 'Business websites & web apps',
+    description: 'Turn visitors into customers with a fast, mobile-ready website or custom web application built around your services and sales process.',
   },
   {
-    title: 'Enterprise .NET Development',
-    description: 'ASP.NET Core Web APIs, microservices, Azure integration, and modern Microsoft ecosystem solutions.',
+    title: 'Custom business software',
+    description: 'Replace repetitive manual processes with secure .NET and Java applications designed for your team, customers, and day-to-day operations.',
   },
   {
-    title: 'Robust Java Development',
-    description: 'Spring Boot backends, RESTful APIs, database design, and performance tuning for enterprise systems.',
+    title: 'APIs & system integration',
+    description: 'Connect the tools you already use, share data reliably, and create smoother workflows across your business.',
   },
   {
-    title: 'API Development & Integration',
-    description: 'Custom REST/GraphQL APIs, payment gateways, OAuth, and third-party integrations for connected systems.',
+    title: 'Online stores & payments',
+    description: 'Give customers an easy way to browse, enquire, or pay with practical e-commerce experiences and payment integrations.',
   },
   {
-    title: 'QA Testing, Maintenance & Support',
-    description: 'Automated/manual testing, bug fixes, performance optimization, and security hardening.',
+    title: 'Ongoing care & improvements',
+    description: 'Keep your digital product dependable with testing, maintenance, performance improvements, and support after launch.',
   },
 ];
 
@@ -29,15 +29,17 @@ export default function Services() {
       <div className="container section-card">
         <div className="text-center mb-5">
           <p className="text-soft">Services</p>
-          <h2>What Kharche Technologies offers</h2>
-          <p className="section-subtitle">Solutions for web apps, enterprise software, APIs, and long-term support.</p>
+          <h2>Practical digital solutions for business growth</h2>
+          <p className="section-subtitle">Start with the business problem. We’ll help you choose the right scope, build a reliable solution, and support it as your needs evolve.</p>
         </div>
         <div className="row g-4">
-          {serviceCards.map((service) => (
+          {serviceCards.map((service, index) => (
             <div key={service.title} className="col-md-6 col-xl-4">
-              <div className="p-4 h-100 rounded-4" style={{ background: '#ffffff' }}>
+              <div className="p-4 h-100 rounded-4 service-card">
+                <span className="service-index">{String(index + 1).padStart(2, '0')}</span>
                 <h5 className="mb-3 brand-accent">{service.title}</h5>
                 <p className="text-soft mb-0">{service.description}</p>
+                <a href="#enquiry" className="service-link" aria-label={`Discuss ${service.title}`}>Discuss your needs <span aria-hidden="true">↗</span></a>
               </div>
             </div>
           ))}

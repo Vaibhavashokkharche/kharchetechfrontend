@@ -7,11 +7,14 @@ html, body, #root {
 body {
   margin: 0;
   font-family: 'Outfit', sans-serif;
-  background: #fdfcf8;
+  background: #f7f8f3;
 }
 a {
   text-decoration: none;
 }
 button, input, textarea {
   font: inherit;
+}
+img {
+  max-width: 100%;
 }

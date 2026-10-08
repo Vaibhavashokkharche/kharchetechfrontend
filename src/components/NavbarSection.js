@@ -1,40 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const links = [
   { label: 'Home', href: '#home' },
   { label: 'Services', href: '#services' },
+  { label: 'Industries', href: '#industries' },
+  { label: 'How we work', href: '#process' },
   { label: 'About us', href: '#about' },
-  { label: 'Admin', href: '#admin' },
+  { label: 'Our team', href: '#team' },
   { label: 'Blog', href: '#blog' },
   { label: 'Projects', href: '#gallery' },
   { label: 'Enquiry', href: '#enquiry' },
   { label: 'Contact us', href: '#contact' },
+  { label: 'FAQs', href: '#faq' },
 ];
 
 export default function NavbarSection() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <header className="py-3 shadow-sm sticky-top">
-      <div className="container d-flex flex-wrap align-items-center justify-content-between">
-        <a href="#home" className="navbar-brand text-dark text-decoration-none">
-          <span className="brand-mark">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 4H20V20H4V4Z" stroke="#5D6778" strokeWidth="1.5"/>
-              <path d="M7 12H17" stroke="#5D6778" strokeWidth="1.5" strokeLinecap="round"/>
-              <path d="M12 7V17" stroke="#5D6778" strokeWidth="1.5" strokeLinecap="round"/>
-            </svg>
-          </span>
+    <header className="site-header sticky-top">
+      <div className="container">
+        <div className="navbar-row">
+          <a href="#home" className="navbar-brand text-dark text-decoration-none" onClick={() => setMenuOpen(false)}>
+            <span className="brand-mark" aria-hidden="true">K<span>.</span></span>
           <span>
             <strong>Kharche Technologies</strong>
-            <small className="brand-subtitle d-block">Elegant software design for local business growth</small>
+            <small className="brand-subtitle d-block">Digital that moves business forward</small>
           </span>
-        </a>
-        <nav className="nav">
-          {links.map((link) => (
-            <a key={link.label} href={link.href} className="nav-link px-2">
-              {link.label}
-            </a>
-          ))}
-        </nav>
+          </a>
+          <button
+            className="menu-toggle"
+            type="button"
+            aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span /><span /><span />
+          </button>
+          <nav className={`site-nav${menuOpen ? ' is-open' : ''}`} aria-label="Main navigation">
+            {links.map((link) => (
+              <a key={link.label} href={link.href} className="nav-link" onClick={() => setMenuOpen(false)}>
+                {link.label}
+              </a>
+            ))}
+            <a href="#enquiry" className="nav-cta" onClick={() => setMenuOpen(false)}>Start a project <span aria-hidden="true">↗</span></a>
+          </nav>
+        </div>
       </div>
     </header>
   );

@@ -40,7 +40,7 @@ export default function Team() {
         </div>
         <div className="row g-4 justify-content-center">
           {teamMembers.map((member) => (
-            <div key={member.name} className="col-12 col-lg-8">
+            <div key={member.name} className="col-6 col-md-4 col-xl-3">
               <div className="team-card">
                 <div className="team-image-wrapper">
                   <img src={member.image} alt={member.name} className="team-image" />
